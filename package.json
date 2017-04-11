@@ -1,1 +1,40 @@
-{     "devDependencies": {         "serve-favicon": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-serve-favicon",     "homepage": "https://github.com/npmtest/node-npmtest-serve-favicon",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-serve-favicon.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [serve-favicon (v2.4.2)](https://github.com/expressjs/serve-favicon#readme) [![npm package](https://img.shields.io/npm/v/npmtest-serve-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-serve-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-serve-favicon.svg)](https://travis-ci.org/npmtest/node-npmtest-serve-favicon)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "serve-favicon": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-serve-favicon",
+    "keywords": [
+        "coverage",
+        "test",
+        "serve-favicon"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_serve_favicon.js",
+    "name": "npmtest-serve-favicon",
+    "nameAlias": "npmtest_serve_favicon",
+    "nameOriginal": "npmtest-serve-favicon",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-serve-favicon.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
