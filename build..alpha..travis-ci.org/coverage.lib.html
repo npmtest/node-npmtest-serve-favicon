@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-serve-favicon/serve-favicon/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-serve-favicon/node_modules/serve-favicon/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-serve-favicon">npmtest-serve-favicon (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-serve-favicon/serve-favicon/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-serve-favicon/node_modules/serve-favicon/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">22.37% <small>(17 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-serve-favicon/serve-favicon/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-serve-favicon/node_modules/serve-favicon/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -706,47 +708,47 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @return {Function} middleware
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function favicon (path, options) {</span>
-<span class="cstat-no" title="statement not covered">  var opts = options || {}</span>
+<span class="fstat-no" title="function not covered" >function favicon (path, options) {</span>
+<span class="cstat-no" title="statement not covered" >  var opts = options || {}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var icon </span>// favicon cache
-<span class="cstat-no" title="statement not covered">  var maxAge = calcMaxAge(opts.maxAge)</span>
+<span class="cstat-no" title="statement not covered" >  var icon </span>// favicon cache
+<span class="cstat-no" title="statement not covered" >  var maxAge = calcMaxAge(opts.maxAge)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!path) {</span>
-<span class="cstat-no" title="statement not covered">    throw new TypeError('path to favicon.ico is required')</span>
+<span class="cstat-no" title="statement not covered" >  if (!path) {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('path to favicon.ico is required')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (Buffer.isBuffer(path)) {</span>
-<span class="cstat-no" title="statement not covered">    icon = createIcon(copyBuffer(path), maxAge)</span>
-  } else <span class="cstat-no" title="statement not covered">if (typeof path === 'string') {</span>
-<span class="cstat-no" title="statement not covered">    path = resolveSync(path)</span>
+<span class="cstat-no" title="statement not covered" >  if (Buffer.isBuffer(path)) {</span>
+<span class="cstat-no" title="statement not covered" >    icon = createIcon(copyBuffer(path), maxAge)</span>
+  } else <span class="cstat-no" title="statement not covered" >if (typeof path === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    path = resolveSync(path)</span>
   } else {
-<span class="cstat-no" title="statement not covered">    throw new TypeError('path to favicon.ico must be string or buffer')</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('path to favicon.ico must be string or buffer')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return <span class="fstat-no" title="function not covered">function favicon (req, res, next) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (parseUrl(req).pathname !== '/favicon.ico') {</span>
-<span class="cstat-no" title="statement not covered">      next()</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >function favicon (req, res, next) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (parseUrl(req).pathname !== '/favicon.ico') {</span>
+<span class="cstat-no" title="statement not covered" >      next()</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {</span>
-<span class="cstat-no" title="statement not covered">      res.statusCode = req.method === 'OPTIONS' ? 200 : 405</span>
-<span class="cstat-no" title="statement not covered">      res.setHeader('Allow', 'GET, HEAD, OPTIONS')</span>
-<span class="cstat-no" title="statement not covered">      res.setHeader('Content-Length', '0')</span>
-<span class="cstat-no" title="statement not covered">      res.end()</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {</span>
+<span class="cstat-no" title="statement not covered" >      res.statusCode = req.method === 'OPTIONS' ? 200 : 405</span>
+<span class="cstat-no" title="statement not covered" >      res.setHeader('Allow', 'GET, HEAD, OPTIONS')</span>
+<span class="cstat-no" title="statement not covered" >      res.setHeader('Content-Length', '0')</span>
+<span class="cstat-no" title="statement not covered" >      res.end()</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (icon) {</span>
-<span class="cstat-no" title="statement not covered">      send(req, res, icon)</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >    if (icon) {</span>
+<span class="cstat-no" title="statement not covered" >      send(req, res, icon)</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    fs.readFile(path, <span class="fstat-no" title="function not covered">function (err, buf) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) <span class="cstat-no" title="statement not covered">return next(err)</span></span>
-<span class="cstat-no" title="statement not covered">      icon = createIcon(buf, maxAge)</span>
-<span class="cstat-no" title="statement not covered">      send(req, res, icon)</span>
+<span class="cstat-no" title="statement not covered" >    fs.readFile(path, <span class="fstat-no" title="function not covered" >function (err, buf) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) <span class="cstat-no" title="statement not covered" >return next(err)</span></span>
+<span class="cstat-no" title="statement not covered" >      icon = createIcon(buf, maxAge)</span>
+<span class="cstat-no" title="statement not covered" >      send(req, res, icon)</span>
     })
   }
 }
@@ -759,12 +761,12 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @return {number}
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function calcMaxAge (val) {</span>
-<span class="cstat-no" title="statement not covered">  var num = typeof val === 'string'</span>
+<span class="fstat-no" title="function not covered" >function calcMaxAge (val) {</span>
+<span class="cstat-no" title="statement not covered" >  var num = typeof val === 'string'</span>
     ? ms(val)
     : val
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return num != null</span>
+<span class="cstat-no" title="statement not covered" >  return num != null</span>
     ? Math.min(Math.max(0, num), ONE_YEAR_MS)
     : ONE_YEAR_MS
 }
@@ -776,10 +778,10 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function copyBuffer (buf) {</span>
-<span class="cstat-no" title="statement not covered">  var copy = new Buffer(buf.length)</span>
-<span class="cstat-no" title="statement not covered">  buf.copy(copy)</span>
-<span class="cstat-no" title="statement not covered">  return copy</span>
+<span class="fstat-no" title="function not covered" >function copyBuffer (buf) {</span>
+<span class="cstat-no" title="statement not covered" >  var copy = new Buffer(buf.length)</span>
+<span class="cstat-no" title="statement not covered" >  buf.copy(copy)</span>
+<span class="cstat-no" title="statement not covered" >  return copy</span>
 }
 &nbsp;
 /**
@@ -791,8 +793,8 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @return {object}
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function createIcon (buf, maxAge) {</span>
-<span class="cstat-no" title="statement not covered">  return {</span>
+<span class="fstat-no" title="function not covered" >function createIcon (buf, maxAge) {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
     body: buf,
     headers: {
       'Cache-Control': 'public, max-age=' + Math.floor(maxAge / 1000),
@@ -809,13 +811,13 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @return {Error}
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function createIsDirError (path) {</span>
-<span class="cstat-no" title="statement not covered">  var error = new Error('EISDIR, illegal operation on directory \'' + path + '\'')</span>
-<span class="cstat-no" title="statement not covered">  error.code = 'EISDIR'</span>
-<span class="cstat-no" title="statement not covered">  error.errno = 28</span>
-<span class="cstat-no" title="statement not covered">  error.path = path</span>
-<span class="cstat-no" title="statement not covered">  error.syscall = 'open'</span>
-<span class="cstat-no" title="statement not covered">  return error</span>
+<span class="fstat-no" title="function not covered" >function createIsDirError (path) {</span>
+<span class="cstat-no" title="statement not covered" >  var error = new Error('EISDIR, illegal operation on directory \'' + path + '\'')</span>
+<span class="cstat-no" title="statement not covered" >  error.code = 'EISDIR'</span>
+<span class="cstat-no" title="statement not covered" >  error.errno = 28</span>
+<span class="cstat-no" title="statement not covered" >  error.path = path</span>
+<span class="cstat-no" title="statement not covered" >  error.syscall = 'open'</span>
+<span class="cstat-no" title="statement not covered" >  return error</span>
 }
 &nbsp;
 /**
@@ -827,8 +829,8 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function isFresh (req, res) {</span>
-<span class="cstat-no" title="statement not covered">  return fresh(req.headers, {</span>
+<span class="fstat-no" title="function not covered" >function isFresh (req, res) {</span>
+<span class="cstat-no" title="statement not covered" >  return fresh(req.headers, {</span>
     'etag': res.getHeader('ETag'),
     'last-modified': res.getHeader('Last-Modified')
   })
@@ -841,15 +843,15 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function resolveSync (iconPath) {</span>
-<span class="cstat-no" title="statement not covered">  var path = resolve(iconPath)</span>
-<span class="cstat-no" title="statement not covered">  var stat = fs.statSync(path)</span>
+<span class="fstat-no" title="function not covered" >function resolveSync (iconPath) {</span>
+<span class="cstat-no" title="statement not covered" >  var path = resolve(iconPath)</span>
+<span class="cstat-no" title="statement not covered" >  var stat = fs.statSync(path)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (stat.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered">    throw createIsDirError(path)</span>
+<span class="cstat-no" title="statement not covered" >  if (stat.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered" >    throw createIsDirError(path)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return path</span>
+<span class="cstat-no" title="statement not covered" >  return path</span>
 }
 &nbsp;
 /**
@@ -861,35 +863,34 @@ var ONE_YEAR_MS = 60 * 60 * 24 * 365 * 1000 // 1 year
  * @param {object} icon
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function send (req, res, icon) {</span>
+<span class="fstat-no" title="function not covered" >function send (req, res, icon) {</span>
   // Set headers
-<span class="cstat-no" title="statement not covered">  var headers = icon.headers</span>
-<span class="cstat-no" title="statement not covered">  var keys = Object.keys(headers)</span>
-<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; keys.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">    var key = keys[i]</span>
-<span class="cstat-no" title="statement not covered">    res.setHeader(key, headers[key])</span>
+<span class="cstat-no" title="statement not covered" >  var headers = icon.headers</span>
+<span class="cstat-no" title="statement not covered" >  var keys = Object.keys(headers)</span>
+<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; keys.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var key = keys[i]</span>
+<span class="cstat-no" title="statement not covered" >    res.setHeader(key, headers[key])</span>
   }
 &nbsp;
   // Validate freshness
-<span class="cstat-no" title="statement not covered">  if (isFresh(req, res)) {</span>
-<span class="cstat-no" title="statement not covered">    res.statusCode = 304</span>
-<span class="cstat-no" title="statement not covered">    res.end()</span>
-<span class="cstat-no" title="statement not covered">    return</span>
+<span class="cstat-no" title="statement not covered" >  if (isFresh(req, res)) {</span>
+<span class="cstat-no" title="statement not covered" >    res.statusCode = 304</span>
+<span class="cstat-no" title="statement not covered" >    res.end()</span>
+<span class="cstat-no" title="statement not covered" >    return</span>
   }
 &nbsp;
   // Send icon
-<span class="cstat-no" title="statement not covered">  res.statusCode = 200</span>
-<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Length', icon.body.length)</span>
-<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Type', 'image/x-icon')</span>
-<span class="cstat-no" title="statement not covered">  res.end(icon.body)</span>
+<span class="cstat-no" title="statement not covered" >  res.statusCode = 200</span>
+<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Length', icon.body.length)</span>
+<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Type', 'image/x-icon')</span>
+<span class="cstat-no" title="statement not covered" >  res.end(icon.body)</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:08:01 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 09:25:46 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
