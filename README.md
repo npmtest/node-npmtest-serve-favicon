@@ -1,4 +1,7 @@
-# test coverage for  [serve-favicon (v2.4.2)](https://github.com/expressjs/serve-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-serve-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-serve-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-serve-favicon.svg)](https://travis-ci.org/npmtest/node-npmtest-serve-favicon)
+# npmtest-serve-favicon
+
+#### test coverage for  [serve-favicon (v2.4.2)](https://github.com/expressjs/serve-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-serve-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-serve-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-serve-favicon.svg)](https://travis-ci.org/npmtest/node-npmtest-serve-favicon)
+
 #### favicon serving middleware with caching
 
 [![NPM](https://nodei.co/npm/serve-favicon.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/serve-favicon)
@@ -9,9 +12,15 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-serve-favicon/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-serve-favicon/tree/gh-pages/build)|
 
+- [https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.html/index.html)
+
 [![istanbul-coverage](https://npmtest.github.io/node-npmtest-serve-favicon/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.html/index.html)
 
+- [https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.html](https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.html)
+
 [![test-report](https://npmtest.github.io/node-npmtest-serve-favicon/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-serve-favicon/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-serve-favicon/build/apidoc.html)
 
 [![apidoc](https://npmdoc.github.io/node-npmdoc-serve-favicon/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-serve-favicon/build/apidoc.html)
 
