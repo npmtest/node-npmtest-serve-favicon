@@ -1,6 +1,6 @@
 # npmtest-serve-favicon
 
-#### test coverage for  [serve-favicon (v2.4.2)](https://github.com/expressjs/serve-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-serve-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-serve-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-serve-favicon.svg)](https://travis-ci.org/npmtest/node-npmtest-serve-favicon)
+#### basic test coverage for  [serve-favicon (v2.4.2)](https://github.com/expressjs/serve-favicon#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-serve-favicon.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-serve-favicon) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-serve-favicon.svg)](https://travis-ci.org/npmtest/node-npmtest-serve-favicon)
 
 #### favicon serving middleware with caching
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-serve-favicon/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-serve-favicon/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-serve-favicon/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-serve-favicon/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-serve-favicon/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-serve-favicon/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-serve-favicon/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-serve-favicon/build/coverage.html/index.html)
 
@@ -96,7 +96,8 @@
         "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
         "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
     },
-    "version": "2.4.2"
+    "version": "2.4.2",
+    "bin": {}
 }
 ```
 
